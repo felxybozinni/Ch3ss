@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ci02ur6e5ecwp"]
+
+[ext_resource type="Texture2D" uid="uid://c5uuxi8lws6k8" path="res://teleport.png" id="1_njnk4"]
+[ext_resource type="Script" uid="uid://qkwiw7vs3u28" path="res://teleport.gd" id="2_f74dl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv78e"]
+atlas = ExtResource("1_njnk4")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3r3rj"]
+atlas = ExtResource("1_njnk4")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tofwx"]
+atlas = ExtResource("1_njnk4")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_moc3h"]
+atlas = ExtResource("1_njnk4")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpek1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv78e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3r3rj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tofwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_moc3h")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1653162955]
+sprite_frames = SubResource("SpriteFrames_rpek1")
+frame = 3
+frame_progress = 1.0
+speed_scale = 3.0
+script = ExtResource("2_f74dl")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
