@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://dahes74s2obn"]
+
+[ext_resource type="Script" uid="uid://c8v45e4fjunj5" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="Texture2D" uid="uid://ddgqokptrv8x" path="res://pixil-frame-0 (3).png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://lxerlmev5f3j" path="res://eyesheet.png" id="3_h2yge"]
+[ext_resource type="AudioStream" uid="uid://cyyv1e0rikmrw" path="res://freesound_community-creepy-distortion-29539.mp3" id="4_lquwl"]
+[ext_resource type="AudioStream" uid="uid://cg0xq6oek87pt" path="res://freesound_community-creepy-vocal-ambience-6074.mp3" id="5_7mycd"]
+[ext_resource type="AudioStream" uid="uid://b5c01fody16wa" path="res://dragon-studio-creepy-crow-caw-322991.mp3" id="6_272bh"]
+[ext_resource type="AudioStream" uid="uid://b831veufsld6f" path="res://dragon-studio-creepy-ghost-whisper-401712.mp3" id="7_5vw27"]
+[ext_resource type="AudioStream" uid="uid://bk3esiwy8lr0n" path="res://idoberg-creepy-bell-fx-246592.mp3" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://b08ybbyqe4h1u" path="res://summon2-0.png" id="9_4c57u"]
+[ext_resource type="Texture2D" uid="uid://113dgb53kcjq" path="res://summon2-1.png" id="10_efxa6"]
+[ext_resource type="Texture2D" uid="uid://yftpll8u31km" path="res://pixil-frame-0 (4).png" id="11_efxa6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
+atlas = ExtResource("3_h2yge")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
+atlas = ExtResource("3_h2yge")
+region = Rect2(320, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+atlas = ExtResource("3_h2yge")
+region = Rect2(640, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpek1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bvp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lquwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mycd")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
+atlas = ExtResource("3_h2yge")
+region = Rect2(160, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vw27"]
+atlas = ExtResource("3_h2yge")
+region = Rect2(480, 0, 160, 160)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kek77"]
+atlas = ExtResource("3_h2yge")
+region = Rect2(800, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lecww"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_272bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vw27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kek77")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Game" type="Node2D" unique_id=1187707476]
+position = Vector2(577, 327)
+scale = Vector2(1.0004305, 1)
+script = ExtResource("1_h2yge")
+
+[node name="pieces" type="Node2D" parent="." unique_id=1725670045]
+
+[node name="tpeffect" type="Node2D" parent="." unique_id=461530803]
+
+[node name="selectables" type="Node2D" parent="." unique_id=980339541]
+
+[node name="other" type="Node2D" parent="." unique_id=278965932]
+
+[node name="holder" type="CanvasLayer" parent="other" unique_id=1201950483]
+
+[node name="crowtimer" type="Timer" parent="other/holder" unique_id=1946786721]
+wait_time = 10.0
+autostart = true
+
+[node name="UI base" type="CanvasLayer" parent="other/holder" unique_id=1731601035]
+layer = -4
+
+[node name="ColorRect2" type="ColorRect" parent="other/holder/UI base" unique_id=1820030636]
+offset_left = -122.0
+offset_top = -57.0
+offset_right = -48.6
+offset_bottom = 253.41818
+scale = Vector2(10, 2.6190476)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="other/holder/UI base" unique_id=397272674]
+anchors_preset = -1
+anchor_left = 0.07603031
+anchor_right = 0.07603031
+offset_left = 490.00012
+offset_top = -131.0
+offset_right = 1689.0001
+offset_bottom = 545.0
+scale = Vector2(1.1522158, 1.4702735)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="PixilFrame0(3)" type="Sprite2D" parent="other/holder/UI base" unique_id=128040331]
+position = Vector2(579, 329)
+scale = Vector2(0.135, 0.135)
+texture = ExtResource("2_1bvp3")
+
+[node name="Camera2D" type="Camera2D" parent="other/holder/UI base" unique_id=625268336]
+position = Vector2(577, 327)
+
+[node name="Foreground" type="CanvasLayer" parent="other/holder" unique_id=50980627]
+layer = 13
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="other/holder" unique_id=1334339483]
+position = Vector2(137, 327)
+scale = Vector2(1.0004305, 1)
+sprite_frames = SubResource("SpriteFrames_rpek1")
+frame = 2
+frame_progress = 1.0
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="other/holder" unique_id=1309849895]
+position = Vector2(1029, 327)
+scale = Vector2(1.0004305, 1)
+sprite_frames = SubResource("SpriteFrames_lecww")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="other/holder" unique_id=670575216]
+position = Vector2(577, 327)
+scale = Vector2(1.0004305, 1)
+stream = ExtResource("4_lquwl")
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="other/holder" unique_id=182193734]
+position = Vector2(577, 327)
+scale = Vector2(1.0004305, 1)
+stream = ExtResource("5_7mycd")
+autoplay = true
+
+[node name="crow" type="AudioStreamPlayer2D" parent="other/holder" unique_id=322970680]
+position = Vector2(577, 327)
+scale = Vector2(1.0004305, 1)
+stream = ExtResource("6_272bh")
+
+[node name="whisper" type="AudioStreamPlayer2D" parent="other/holder" unique_id=1374725910]
+position = Vector2(577, 327)
+scale = Vector2(1.0004305, 1)
+stream = ExtResource("7_5vw27")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="other/holder" unique_id=336175265]
+position = Vector2(577, 327)
+scale = Vector2(1.0004305, 1)
+stream = ExtResource("8_5vw27")
+
+[node name="Button" type="Button" parent="other/holder" unique_id=424818572]
+offset_left = 978.0
+offset_top = 495.0
+offset_right = 1072.0
+offset_bottom = 589.0
+icon = ExtResource("9_4c57u")
+expand_icon = true
+
+[node name="Button2" type="Button" parent="other/holder" unique_id=1967560204]
+offset_left = 75.0
+offset_top = 495.0
+offset_right = 169.0
+offset_bottom = 589.0
+icon = ExtResource("10_efxa6")
+expand_icon = true
+
+[node name="Camera2D" type="Camera2D" parent="other/holder" unique_id=595798633]
+position = Vector2(576, 326)
+
+[node name="PixilFrame0(4)" type="Sprite2D" parent="other" unique_id=1630358321]
+position = Vector2(24.989265, 19)
+scale = Vector2(0.17209348, 0.17209348)
+texture = ExtResource("11_efxa6")
+
+[connection signal="timeout" from="other/holder/crowtimer" to="." method="_on_crowtimer_timeout"]
+[connection signal="pressed" from="other/holder/Button" to="." method="onblacksummon"]
+[connection signal="pressed" from="other/holder/Button2" to="." method="on_summon_white"]
