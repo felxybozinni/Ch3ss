@@ -9,6 +9,7 @@ const TELEPORT = preload("res://teleport.tscn")
 @onready var audio_stream_player_2d_3: AudioStreamPlayer2D = $other/holder/AudioStreamPlayer2D3
 @onready var crowtimer: Timer = $other/holder/crowtimer
 @onready var crow: AudioStreamPlayer2D = $other/holder/crow
+var variable = "variable"
 const BOARDSIZE = 8
 const TILESIZE = 81
 const YADJUST = 620
@@ -47,6 +48,7 @@ func _ready():
 	board.append([-1,-1,-1,-1,-1,-1,-1,-1])
 	board.append([-4,-3,-2,-5,-6,-2,-3,-4])
 	holder.global_position.x = holder.global_position.x - TILESIZE
+	holder.global_position.x -= (TILESIZE/2) 
 	display()
 	
 func display():
