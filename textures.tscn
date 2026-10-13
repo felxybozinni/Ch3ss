@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://ct3k8dk66wlpy"]
-
-[ext_resource type="Texture2D" uid="uid://vjn2w0gac8xy" path="res://pieces/pawnred.png" id="1_306wm"]
-
-[node name="TextureRect" type="TextureRect" unique_id=281196197]
-offset_right = 62.0
-offset_bottom = 62.0
-texture = ExtResource("1_306wm")
-expand_mode = 1
