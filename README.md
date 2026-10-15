@@ -1,0 +1,1 @@
+This is a game made about chess. It is insanely simple, as it is only my third game, but I'm pretty proud! The rendering is fine on my mac at home, but it seemed to break on a school computer running windows w/ microsoft edge so I hope it works for you. enjoy!
